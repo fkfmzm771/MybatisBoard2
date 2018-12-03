@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/src/DAO/Mapper.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/src/Manager/BoardManager.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/src/UI/BoardUI.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/src/VO/Board.java" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/src/VO/Member.java" charset="x-windows-949" />
+  </component>
+</project>

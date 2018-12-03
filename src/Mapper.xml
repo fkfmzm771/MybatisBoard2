@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="DAO.Mapper">
+
+	<insert id="insertMember" parameterType="VO.Member">
+		INSERT INTO BOARDMEMBER
+		(
+		ID,
+		PW
+		)
+		VALUES
+		(
+		#{id},
+		#{pw}
+		)
+	</insert>
+	
+	<select id="loginMember" resultType="VO.Member" parameterType="VO.Member">
+	select
+	id,
+	pw
+	from
+	boardmember
+	where
+	id = #{id}
+	and pw = #{pw}	
+	</select>
+	
+	<insert id="insertBoard" parameterType="VO.Board">
+	
+	insert into board
+	
+	(
+	boardseq,
+	id,
+	boardtitle,
+	boardcontent,
+	indate,
+	hitcount
+	)
+	values
+	(boardseq.nextval,#{id},#{boardTitle},#{boardContent},sysdate,0)
+	
+	
+	</insert>
+	
+	<select id="selectAllBoard" resultType = "VO.Board">
+	select
+		boardseq,
+		id,
+		boardtitle,
+		boardcontent,
+		indate,
+		hitcount
+	from
+		board
+	</select>
+	
+	<update id="increseHit" parameterType="String">
+	update board set
+	hitcount=hitcount+1
+	where boardseq=#{boardSeq}
+	</update>
+	
+</mapper>
